@@ -1,8 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="main.css"> 
     </head>
     <body>
+        <div ng-controller="MainController">
+            <label for="num-cards"># of Cards:</label>
+            <input id="num-cards" ng-model="numCards" type="number" ng-change="onNumCardsChanged()"/>
+            <div id="characters">
+                <span>Characters</span>
+                <span ng-repeat="id in characters.selected">
+                    &nbsp;{{id}}
+                </span>
+            </div>
+            <div id="locations">
+                <span>Locations</span>
+                <span ng-repeat="id in locations.selected">
+                    &nbsp;{{id}}
+                </span>
+            </div>
+            <div id="objects">
+                <span>Objects</span>
+                <span ng-repeat="id in objects.selected">
+                    &nbsp;{{id}}
+                </span>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
     </body>
 </html>

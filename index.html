@@ -13,7 +13,7 @@
         <span>{{numCards}}</span>
         <button class="card-adder" ng-click="addCard(1)">+</button>
         <div class="category-container" ng-repeat="category in categories">
-            <img class="category-icon" src="assets/images/{{category.name}}.png"/>
+            <img class="category-icon" ng-src="assets/images/{{category.name}}.png"/>
             <span ng-repeat="id in category.selected">
                 <span ng-if="!$first">&nbsp;-&nbsp;</span>
                 {{id}}

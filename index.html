@@ -8,6 +8,16 @@
 
 <body>
     <div ng-controller="MainController">
+        <div>
+            <div>
+                <input id="has-promo-checkbox" type="checkbox" ng-model="hasPromo" ng-change="addCard(0)"/>
+                <label for="has-promo-checkbox">Promo</label>
+            </div>
+            <div>
+                <input id="has-hidden-signs-checkbox" type="checkbox" ng-model="hasHiddenSigns" ng-change="addCard(0)"/>
+                <label for="has-hidden-signs-checkbox">Hidden Signs</label>
+            </div>
+        </div>
         <span># of Cards:</span>
         <button class="card-adder" ng-click="addCard(-1)">-</button>
         <span>{{numCards}}</span>
